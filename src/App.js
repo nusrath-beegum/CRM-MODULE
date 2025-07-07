@@ -8,8 +8,10 @@ export default function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<RegistrationForm />} />
+
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/register" element={<RegistrationForm />} />
+
       </Routes>
     </Router>
   );
