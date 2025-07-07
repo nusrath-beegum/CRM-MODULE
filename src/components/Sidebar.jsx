@@ -21,14 +21,13 @@ export default function Sidebar({ activeItem, setActiveItem }) {
 
           return (
             <div key={item.id} className="text-center">
-              {/* Icon Button */}
+
               <button
                 onClick={() => setActiveItem(item.id)}
-                className={`btn rounded-circle d-flex align-items-center justify-content-center mx-auto ${
-                  isActive
+                className={`btn rounded-circle d-flex align-items-center justify-content-center mx-auto ${isActive
                     ? "btn-primary text-white"
                     : "btn-light border text-dark"
-                }`}
+                  }`}
                 style={{ width: "45px", height: "45px" }}
               >
                 <i
@@ -37,7 +36,7 @@ export default function Sidebar({ activeItem, setActiveItem }) {
                 ></i>
               </button>
 
-              {/* Label */}
+
               <div
                 className="small mt-1"
                 style={{

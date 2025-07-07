@@ -54,8 +54,11 @@ const RegistrationForm = () => {
         setSubmitError("");
 
         try {
-            await new Promise((res) => setTimeout(res, 1000)); // simulate API
+            await new Promise((res) => setTimeout(res, 1000));
             setIsSubmitted(true);
+            setTimeout(() => {
+                navigate("/login");
+            }, 2000);
         } catch (err) {
             setSubmitError("Something went wrong. Please try again.");
         } finally {
@@ -67,10 +70,8 @@ const RegistrationForm = () => {
         return (
             <div className="d-flex align-items-center justify-content-center min-vh-100 bg-light">
                 <div className="bg-white p-4 rounded shadow text-center" style={{ width: "100%", maxWidth: "480px" }}>
-                    <h4 className="mb-3">Registration Successful!</h4>
-                    <button className="btn btn-primary w-100" onClick={() => setIsSubmitted(false)}>
-                        Register Another
-                    </button>
+                    <h4 className="mb-3 text-success">Registration Successful!</h4>
+                    <p className="text-muted small">Redirecting to login...</p>
                 </div>
             </div>
         );
@@ -93,6 +94,7 @@ const RegistrationForm = () => {
                     <h4 className="text-center mb-4 fw-bold">Register</h4>
                     <form onSubmit={handleSubmit}>
                         <div className="row">
+
                             <div className="col-6 mb-3">
                                 <label htmlFor="firstName" className="form-label">First Name</label>
                                 <input
@@ -106,6 +108,7 @@ const RegistrationForm = () => {
                                 />
                                 {errors.firstName && <div className="invalid-feedback">{errors.firstName}</div>}
                             </div>
+
 
                             <div className="col-6 mb-3">
                                 <label htmlFor="lastName" className="form-label">Last Name</label>
@@ -121,6 +124,7 @@ const RegistrationForm = () => {
                                 {errors.lastName && <div className="invalid-feedback">{errors.lastName}</div>}
                             </div>
 
+
                             <div className="col-6 mb-3">
                                 <label htmlFor="email" className="form-label">Email</label>
                                 <input
@@ -134,6 +138,7 @@ const RegistrationForm = () => {
                                 />
                                 {errors.email && <div className="invalid-feedback">{errors.email}</div>}
                             </div>
+
 
                             <div className="col-6 mb-3">
                                 <label htmlFor="phoneNumber" className="form-label">Phone Number</label>
@@ -149,6 +154,7 @@ const RegistrationForm = () => {
                                 {errors.phoneNumber && <div className="invalid-feedback">{errors.phoneNumber}</div>}
                             </div>
 
+
                             <div className="col-6 mb-3">
                                 <label htmlFor="companyName" className="form-label">Company Name</label>
                                 <input
@@ -162,6 +168,7 @@ const RegistrationForm = () => {
                                 />
                                 {errors.companyName && <div className="invalid-feedback">{errors.companyName}</div>}
                             </div>
+
 
                             <div className="col-6 mb-3">
                                 <label htmlFor="industryType" className="form-label">Industry Type</label>
@@ -179,6 +186,7 @@ const RegistrationForm = () => {
                                 </select>
                                 {errors.industryType && <div className="invalid-feedback">{errors.industryType}</div>}
                             </div>
+
 
                             <div className="col-6 mb-3">
                                 <label htmlFor="countryRegion" className="form-label">Country or Region</label>
