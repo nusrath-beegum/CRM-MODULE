@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Card, Form, Button, Alert } from 'react-bootstrap';
+import { Card, Form, Button, Alert } from 'react-bootstrap';
 import { Eye, EyeOff } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
@@ -108,7 +108,7 @@ const Login = () => {
 
   return (
     <div style={{ backgroundColor: '#f9f8fe', minHeight: '100vh' }} className="d-flex flex-column align-items-center justify-content-center py-5">
-      <Card style={{ width: '440px',height: '320px', borderRadius: '8px', border: '1px solid #eaeaea' }}>
+      <Card style={{ width: '440px', height: '320px', borderRadius: '8px', border: '1px solid #eaeaea' }}>
         <Card.Body className="p-4">
           <h4 className="text-center fw-bold mb-4">Log in</h4>
 
@@ -194,13 +194,14 @@ const Login = () => {
         </Card.Body>
       </Card>
 
-     
+
       <div className="text-center mt-3">
         <span className="small">Don’t have an account? </span>
         <Button
           variant="link"
           className="p-0 text-decoration-none small fw-medium"
           style={{ color: '#6c3fcf' }}
+          onClick={() => navigate('/')}
         >
           Sign up
         </Button>
