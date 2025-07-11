@@ -32,19 +32,19 @@ export default function TeamPerformance() {
 
   return (
     <div className="card shadow-sm">
-      {/* Header */}
+
       <div className="card-header bg-white d-flex justify-content-between align-items-center">
         <h5 className="card-title mb-0 fw-semibold">Team Performance Tracking</h5>
         <button
           onClick={handleExportCSV}
-          className="btn btn-primary btn-sm d-flex align-items-center gap-2"
+          className="btn btn-outline-purple btn-sm d-flex align-items-center gap-2"
         >
           <i className="bi bi-download"></i>
           Export CSV
         </button>
       </div>
 
-      {/* Table */}
+
       <div className="card-body p-0">
         <div className="table-responsive">
           <table className="table table-hover mb-0">
@@ -68,16 +68,14 @@ export default function TeamPerformance() {
                         ${member.revenue.toLocaleString()}
                       </span>
                       <span
-                        className={`badge d-flex align-items-center gap-1 ${
-                          member.trend > 0
+                        className={`badge d-flex align-items-center gap-1 ${member.trend > 0
                             ? 'bg-success bg-opacity-10 text-success'
                             : 'bg-danger bg-opacity-10 text-danger'
-                        }`}
+                          }`}
                       >
                         <i
-                          className={`bi ${
-                            member.trend > 0 ? 'bi-arrow-up' : 'bi-arrow-down'
-                          }`}
+                          className={`bi ${member.trend > 0 ? 'bi-arrow-up' : 'bi-arrow-down'
+                            }`}
                           style={{ fontSize: '12px' }}
                         ></i>
                         {member.trend > 0 ? '+' : ''}
