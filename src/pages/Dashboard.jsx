@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import Header from "../components/Header";
-import Sidebar from "../components/Sidebar";
+import React from "react";
 import MetricCard from "../features/dashboard/MetricCard";
 import ConversionFunnel from "../features/dashboard/ConversionFunnel";
 import SalesChart from "../features/dashboard/SalesChart";
@@ -8,7 +6,7 @@ import TeamPerformance from "../features/dashboard/TeamPerformance";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 export default function Dashboard() {
-  const [activeItem, setActiveItem] = useState("dashboard");
+
 
   const metrics = [
     {
@@ -44,9 +42,9 @@ export default function Dashboard() {
 
   return (
     <div className="min-vh-100 bg-light">
-      <Header />
+
       <div className="d-flex">
-        <Sidebar activeItem={activeItem} setActiveItem={setActiveItem} />
+
         <main className="flex-fill p-4">
 
           <div className="row g-4 mb-4">
