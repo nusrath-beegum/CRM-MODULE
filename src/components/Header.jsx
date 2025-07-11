@@ -30,7 +30,7 @@ export default function Header() {
             <i className="bi bi-bell"></i>
           </button>
           <button
-            className="btn btn-primary rounded-circle fw-bold text-white"
+            className="btn btn-purple rounded-circle fw-bold text-white"
             style={{ width: "40px", height: "40px" }}
           >
             A
