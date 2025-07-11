@@ -37,7 +37,7 @@ export default function TeamPerformance() {
         <h5 className="card-title mb-0 fw-semibold">Team Performance Tracking</h5>
         <button
           onClick={handleExportCSV}
-          className="btn btn-primary btn-sm d-flex align-items-center gap-2"
+          className="btn btn-outline-purple btn-sm d-flex align-items-center gap-2"
         >
           <i className="bi bi-download"></i>
           Export CSV
