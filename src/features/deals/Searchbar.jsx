@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchBar = () => (
   <div className="position-relative">
-    <div className="input-group" style={{ width: '500px' }}>
+    <div className="input-group search-input" style={{ width: '500px' }}>
       <span className="input-group-text bg-transparent border-0">
         <i className="bi bi-search text-muted"></i>
       </span>

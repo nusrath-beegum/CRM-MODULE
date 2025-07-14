@@ -53,7 +53,7 @@ export default function CreateDeal({ show, onClose, closeDate, setCloseDate }) {
           <button className="btn-close" onClick={onClose}></button>
         </div>
 
-        <form onSubmit={handleSubmit}>
+        <form id="createDealForm" onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="form-label">
               Deal Name <span className="text-danger">*</span>
@@ -89,7 +89,7 @@ export default function CreateDeal({ show, onClose, closeDate, setCloseDate }) {
               Amount <span className="text-danger">*</span>
             </label>
             <input
-              type="text"
+              type="number"
               className="form-control"
               placeholder="Enter the deal amount"
               value={amount}
