@@ -1,14 +1,13 @@
 :root {
-    --primary-color: #5948db;
+  --primary-color: #5948db;
 }
 
 .btn-purple {
-    background-color: var(--primary-color) !important;
+  background-color: var(--primary-color) !important;
 }
 
 .btn-outline-purple {
-    color: var(--primary-color) !important;
-    border-color: var(--primary-color) !important;
-    background-color: transparent !important;
-
+  color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  background-color: transparent !important;
 }
